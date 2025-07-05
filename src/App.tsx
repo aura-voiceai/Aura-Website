@@ -1246,7 +1246,7 @@ function App() {
           <>
             <Hero>
               <HumanoidLogo
-                src={isDarkMode ? '/logo_white.png' : '/logo_black.png'}
+                src={isDarkMode ? './logo_white.png' : './logo_black.png'}
                 alt="Humanoid Background"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ 
@@ -1435,28 +1435,28 @@ function App() {
           ))}
         </ParticlesContainer>
         <TopLeftSignal
-          src={isDarkMode ? '/signal_white.png' : '/signal_black.png'}
+          src={isDarkMode ? './signal_white.png' : './signal_black.png'}
           alt="Signal Icon"
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         />
         <TopRightSignal
-          src={isDarkMode ? '/signal_white.png' : '/signal_black.png'}
+          src={isDarkMode ? './signal_white.png' : './signal_black.png'}
           alt="Signal Icon"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.8, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         />
         <BottomLeftSignal
-          src={isDarkMode ? '/signal_white.png' : '/signal_black.png'}
+          src={isDarkMode ? './signal_white.png' : './signal_black.png'}
           alt="Signal Icon"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.8, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         />
         <BottomRightSignal
-          src={isDarkMode ? '/signal_white.png' : '/signal_black.png'}
+          src={isDarkMode ? './signal_white.png' : './signal_black.png'}
           alt="Signal Icon"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 0.8, scale: 1 }}
@@ -1469,7 +1469,7 @@ function App() {
           transition={{ duration: 0.5 }}
         >
           <Logo
-            src={isDarkMode ? '/signal_white.png' : '/signal_black.png'}
+            src={isDarkMode ? './signal_white.png' : './signal_black.png'}
             alt="Aura Logo"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ 
