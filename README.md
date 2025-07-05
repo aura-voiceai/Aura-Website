@@ -48,6 +48,46 @@ npm run dev
 - `npm run build` - Construye la aplicación para producción
 - `npm run preview` - Previsualiza la build de producción
 - `npm run lint` - Ejecuta el linter de ESLint
+- `npm run deploy` - Despliega a GitHub Pages (después de build)
+
+## Despliegue
+
+### 🚀 GitHub Pages (Automático)
+
+El sitio se despliega automáticamente a GitHub Pages cada vez que se hace push a la rama `main`.
+
+**URL del sitio:** [https://aura-voiceai.github.io/Aura-Website](https://aura-voiceai.github.io/Aura-Website)
+
+#### Configuración manual (si es necesario):
+
+1. Ve a tu repositorio en GitHub
+2. Settings → Pages
+3. Source: "Deploy from a branch"
+4. Branch: `gh-pages` 
+5. Folder: `/ (root)`
+
+### ⚡ Azure Static Web Apps
+
+Para desplegar en Azure Static Web Apps:
+
+1. **Crear recurso en Azure:**
+   - Ve al portal de Azure
+   - Crea un nuevo "Static Web App"
+   - Conecta con tu repositorio de GitHub
+   - Selecciona la rama `main`
+
+2. **Configuración automática:**
+   - Build Location: `/`
+   - App Location: `/`
+   - Output Location: `dist`
+
+3. **Token de acceso:**
+   - Copia el token de deployment
+   - Agrégalo como secreto en GitHub: `AZURE_STATIC_WEB_APPS_API_TOKEN`
+
+4. **Activar workflow:**
+   - Renombra `.github/workflows/azure-static-web-apps.yml` para activarlo
+   - Desactiva `deploy.yml` si solo quieres usar Azure
 
 ## Estructura del Proyecto
 
@@ -75,6 +115,17 @@ El proyecto espera las siguientes imágenes en el directorio `public/`:
 ### Personalización
 
 Para personalizar los colores y estilos, edita las variables CSS en `src/styles/GlobalStyles.ts`.
+
+### Dominio personalizado
+
+Para usar un dominio personalizado:
+
+1. **GitHub Pages:**
+   - Agrega el dominio en la configuración de Pages
+   - Actualiza el `cname` en `.github/workflows/deploy.yml`
+
+2. **Azure Static Web Apps:**
+   - Configura el dominio personalizado en el portal de Azure
 
 ## Contribuir
 
